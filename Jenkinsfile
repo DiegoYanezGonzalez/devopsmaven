@@ -6,9 +6,6 @@ pipeline {
         jdk 'JDK17'          // Nombre configurado en Jenkins → Global Tools
     }
 
-    environment {
-        // Variables opcionales si necesitas sonar, docker o credenciales
-    }
 
     stages {
         stage('Checkout') {
