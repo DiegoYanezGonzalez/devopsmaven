@@ -8,11 +8,15 @@ pipeline {
 
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/DiegoYanezGonzalez/devopsmaven' // Reemplaza con tu repo
-            }
-        }
+      stage('Checkout') {
+    steps {
+        checkout([$class: 'GitSCM',
+            branches: [[name: '*/main']],  // <- cambia aquí
+            userRemoteConfigs: [[url: 'https://github.com/DiegoYanezGonzalez/devopsmaven']]
+        ])
+    }
+}
+
 
         stage('Compile') {
             steps {
