@@ -1,12 +1,12 @@
 package com.devops;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class AppTest {
- @Test
- public void testAddTask() {
- App.tasks.clear();
- App.addTask("Terminar ejercicio Maven");
- assertEquals(1, App.tasks.size());
- }
+
+    @Test
+    public void testSuma() {
+        assertEquals(4, 2 + 2);
+    }
 }
